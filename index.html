@@ -43,14 +43,15 @@
             </div>
 
             <div class="card-footer-container">
-              <figure>
+              <figure class="author-content">
                 <img
+                  class="author-img"
                   src="./public/images/avatar-michelle.jpg"
                   alt="Michelle Appleton"
                 />
-                <figcaption>
-                  <p>Michelle Appleton</p>
-                  <time>28 jun 2020</time>
+                <figcaption class="author-info">
+                  <p class="author-name">Michelle Appleton</p>
+                  <time class="time">28 jun 2020</time>
                 </figcaption>
               </figure>
               <button
@@ -60,10 +61,21 @@
                 aria-expanded="false"
                 aria-controls="share"
               >
-                <img src="./public/images/icon-share.svg" alt="share" />
+                <img
+                  class="share-img"
+                  src="./public/images/icon-share.svg"
+                  alt="share"
+                />
               </button>
-              <div hidden="" id="share" role="tooltip">
-                Thanks for toggling! Please click again to hide me.
+              <div class="share" id="share" role="tooltip">
+                <div class="tooltip-text">Share</div>
+                <div class="tooltip-icons">
+                  <a href="#">
+                    <img src="./public/images/icon-facebook.svg" alt="" />
+                    <img src="./public/images/icon-twitter.svg" alt="" />
+                    <img src="./public/images/icon-pinterest.svg" alt="" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
