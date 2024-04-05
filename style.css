@@ -81,3 +81,27 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.card-top-container {
+  padding: 36px 32px 32px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-gray-blue);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.card-content {
+  font-size: 13px;
+  color: var(--dark-blue);
+  line-height: 1.5;
+}

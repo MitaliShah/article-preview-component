@@ -20,21 +20,27 @@
   <body>
     <main>
       <h1 class="sr-only">Article preview component</h1>
+
       <div class="container">
         <article class="card">
-          <div class="card-image">
-            <img src="./public/images/drawers.jpg" alt="furniture drawers" />
-          </div>
+          <img
+            class="card-image"
+            src="./public/images/drawers.jpg"
+            alt="furniture drawers"
+          />
+
           <div class="card-text-container">
-            <h2 class="card-title">
-              Shift the overall look and feel by adding these wonderful touches
-              to furniture in your home
-            </h2>
-            <p class="card-content">
-              Ever been in a room and felt like something was missing? Perhaps
-              it felt slightly bare and uninviting. I’ve got some simple tips to
-              help you make any room feel complete.
-            </p>
+            <div class="card-top-container">
+              <h2 class="card-title">
+                Shift the overall look and feel by adding these wonderful
+                touches to furniture in your home
+              </h2>
+              <p class="card-content">
+                Ever been in a room and felt like something was missing? Perhaps
+                it felt slightly bare and uninviting. I’ve got some simple tips
+                to help you make any room feel complete.
+              </p>
+            </div>
 
             <div class="card-footer-container">
               <figure>
@@ -47,9 +53,18 @@
                   <time>28 jun 2020</time>
                 </figcaption>
               </figure>
-              <button>
+              <button
+                class="toggle-tooltip"
+                id="toggle-tooltip"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="share"
+              >
                 <img src="./public/images/icon-share.svg" alt="share" />
               </button>
+              <div hidden="" id="share" role="tooltip">
+                Thanks for toggling! Please click again to hide me.
+              </div>
             </div>
           </div>
         </article>
