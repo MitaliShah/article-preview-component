@@ -50,6 +50,7 @@ h6 {
   --dark-blue: hsl(214, 17%, 51%);
   --gray-blue: hsl(212, 23%, 69%);
   --light-gray-blue: hsl(210, 46%, 95%);
+  --white: hsl(0, 0, 100, 100%);
 }
 
 body {
@@ -65,10 +66,11 @@ body {
 
 .container {
   max-width: 20.43rem;
-  background: var(--white);
+  /* background: var(--white); */
   box-shadow: 1px 0px 5px 1px rgb(0, 0, 0, 0.2);
   margin-left: 10px;
   margin-right: 10px;
+  border-radius: 2rem;
 }
 
 .sr-only {
@@ -84,6 +86,12 @@ body {
 
 .card-text-container {
   background-color: white;
+}
+
+.card-img-container {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
 }
 
 .card-image {
@@ -110,21 +118,19 @@ body {
   line-height: 1.5;
 }
 
-.share-img {
-  /* background-color: var(--light-gray-blue); */
-}
-
 .card-footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 32px 20px;
+  isolation: isolate;
+  position: relative;
+  /* background-color: var(--light-gray-blue); */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
 }
 
 .author-content {
   display: flex;
   gap: 16px;
-  align-items: center;
 }
 
 .author-info {
@@ -146,8 +152,10 @@ body {
   border-radius: 50%;
 }
 
-.share {
-  display: none;
+.author-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .toggle-tooltip {
@@ -158,10 +166,29 @@ body {
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 32px;
+}
+
+.share {
+  color: var(--gray-blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 16px 32px 20px;
+  z-index: 999999;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.tooltip-text {
+  text-transform: uppercase;
+  margin-right: 21px;
 }
 
 .tooltip-icons {
+  display: flex;
+  gap: 16px;
+  color: var(--white);
 }

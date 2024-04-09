@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+
     <title>Article preview component</title>
   </head>
   <body>
@@ -23,11 +24,13 @@
 
       <div class="container">
         <article class="card">
-          <img
-            class="card-image"
-            src="./public/images/drawers.jpg"
-            alt="furniture drawers"
-          />
+          <div class="card-img-container">
+            <img
+              class="card-image"
+              src="./public/images/drawers.jpg"
+              alt="furniture drawers"
+            />
+          </div>
 
           <div class="card-text-container">
             <div class="card-top-container">
@@ -42,39 +45,40 @@
               </p>
             </div>
 
-            <div class="card-footer-container">
-              <figure class="author-content">
-                <img
-                  class="author-img"
-                  src="./public/images/avatar-michelle.jpg"
-                  alt="Michelle Appleton"
-                />
-                <figcaption class="author-info">
-                  <p class="author-name">Michelle Appleton</p>
-                  <time class="time">28 jun 2020</time>
-                </figcaption>
-              </figure>
-              <button
-                class="toggle-tooltip"
-                id="toggle-tooltip"
-                aria-haspopup="true"
-                aria-expanded="false"
-                aria-controls="share"
-              >
-                <img
-                  class="share-img"
-                  src="./public/images/icon-share.svg"
-                  alt="share"
-                />
-              </button>
-              <div class="share" id="share" role="tooltip">
-                <div class="tooltip-text">Share</div>
-                <div class="tooltip-icons">
-                  <a href="#">
-                    <img src="./public/images/icon-facebook.svg" alt="" />
-                    <img src="./public/images/icon-twitter.svg" alt="" />
-                    <img src="./public/images/icon-pinterest.svg" alt="" />
-                  </a>
+            <div class="card-footer-container" id="card-footer-container">
+              <div class="author-container" id="author-container">
+                <figure class="author-content" id="author-content">
+                  <img
+                    class="author-img"
+                    src="./public/images/avatar-michelle.jpg"
+                    alt="Michelle Appleton"
+                  />
+                  <figcaption class="author-info">
+                    <p class="author-name">Michelle Appleton</p>
+                    <time datetime="2020-06-28" class="time">28 jun 2020</time>
+                  </figcaption>
+                </figure>
+                <button
+                  class="toggle-tooltip"
+                  id="toggle-tooltip"
+                  onclick="toggle()"
+                >
+                  <img
+                    class="share-img"
+                    id="share-img"
+                    src="./public/images/icon-share.svg"
+                    alt="share"
+                  />
+                </button>
+                <div class="share" id="share" role="tooltip" hidden>
+                  <div class="tooltip-text">Share</div>
+                  <div class="tooltip-icon-container">
+                    <a href="#" class="tooltip-icons">
+                      <img src="./public/images/icon-facebook.svg" alt="" />
+                      <img src="./public/images/icon-twitter.svg" alt="" />
+                      <img src="./public/images/icon-pinterest.svg" alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -82,6 +86,23 @@
         </article>
       </div>
     </main>
-    <script type="module" src="/main.js"></script>
+    <!-- <script type="module" src="/main.js"></script> -->
+    <script>
+      function toggle() {
+        let tooltip = document.getElementById("share");
+        let cardFooterContainer = document.getElementById(
+          "card-footer-container"
+        );
+        let image = document.getElementById("share-img");
+
+        if (tooltip.style.display === "flex") {
+          tooltip.style.display = "none";
+          cardFooterContainer.style.background = "none";
+        } else {
+          tooltip.style.display = "flex";
+          cardFooterContainer.style.background = "hsl(217, 19%, 35%)";
+        }
+      }
+    </script>
   </body>
 </html>
