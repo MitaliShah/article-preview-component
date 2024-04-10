@@ -93,14 +93,16 @@
         let cardFooterContainer = document.getElementById(
           "card-footer-container"
         );
-        let image = document.getElementById("share-img");
+        const mediaQuery = window.matchMedia("(max-width: 500px)");
 
         if (tooltip.style.display === "flex") {
           tooltip.style.display = "none";
           cardFooterContainer.style.background = "none";
         } else {
           tooltip.style.display = "flex";
-          cardFooterContainer.style.background = "hsl(217, 19%, 35%)";
+          if (mediaQuery.matches) {
+            cardFooterContainer.style.background = "hsl(217, 19%, 35%)";
+          }
         }
       }
     </script>
