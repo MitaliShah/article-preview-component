@@ -66,7 +66,7 @@ body {
 
 .container {
   max-width: 20.43rem;
-  /* background: var(--white); */
+
   box-shadow: 1px 0px 5px 1px rgb(0, 0, 0, 0.2);
   margin-left: 10px;
   margin-right: 10px;
@@ -122,7 +122,6 @@ body {
   padding: 0 32px 20px;
   isolation: isolate;
   position: relative;
-  /* background-color: var(--light-gray-blue); */
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   overflow: hidden;
@@ -224,7 +223,6 @@ body {
 
   .card-footer-container {
     position: initial;
-    /* background-color: none; */
   }
 
   .card-text-container {
@@ -246,8 +244,6 @@ body {
     width: max-content;
     padding: 18px 36px;
     top: 165px;
-    /* left: 65%; */
-    /* right: -65px; */
     left: 62%;
     z-index: 999999;
     background: hsl(217, 19%, 35%);
@@ -256,7 +252,7 @@ body {
   .share::after {
     content: "";
     position: absolute;
-    top: 100%;
+    top: 96%;
     left: 50%;
     margin-left: -5px;
     border-width: 10px;
