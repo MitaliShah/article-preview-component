@@ -238,7 +238,6 @@ body {
   }
 
   .share {
-    /* background-color: red; */
     color: var(--gray-blue);
     border-radius: 8px;
     height: 55px;
@@ -246,19 +245,24 @@ body {
     transform: translateY(-50%);
     width: max-content;
     padding: 18px 36px;
-    /* height: max-content; */
     top: 165px;
-    left: 65%;
-    right: -65px;
-    /* top: 0;
-    left: 0;
-    bottom: 0;
-    padding: 16px 32px 20px; */
+    /* left: 65%; */
+    /* right: -65px; */
+    left: 62%;
     z-index: 999999;
     background: hsl(217, 19%, 35%);
   }
 
-  /* #active {
-    background: hsl(217, 19%, 35%);
-  } */
+  .share::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    width: 0;
+    height: 0;
+  }
 }
